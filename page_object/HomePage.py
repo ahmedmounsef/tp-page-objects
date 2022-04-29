@@ -22,12 +22,12 @@ class HomePage:
 
     def openAllMenu(self):
         self.driver.find_element(By.CSS_SELECTOR, self.hamburguer_menu_selector).click()
-        wait = WebDriverWait(self.driver, 3)
+        wait = WebDriverWait(self.driver, 5)
         wait.until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, self.side_menu_selector)))
 
     def openBookCategory(self):
         self.driver.find_element(By.CSS_SELECTOR, self.livres_menu_selector).click()
-        wait = WebDriverWait(self.driver, 3)
+        wait = WebDriverWait(self.driver, 5)
         wait.until(expected_conditions.invisibility_of_element_located((By.CSS_SELECTOR, self.livres_menu_selector)))
         wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, self.tous_les_livres)))
 
